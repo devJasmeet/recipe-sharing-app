@@ -10,10 +10,10 @@ function AccessLayout({ children , authentication=true }) {
     useEffect(()=> {
         if(authentication && authStatus != authentication ){
             navigate('/login')
-            console.log("Navigated to Login");
+            //console.log("Navigated to Login");
         } else if(!authentication && authStatus != authentication ){
             navigate('/')
-            console.log("Navigated to Home");
+            //console.log("Navigated to Home");
         }
         setLoader(false)
     },[authStatus,navigate,authentication])

@@ -16,7 +16,6 @@ function AllArticles() {
         const fetchData = async() => {
             const res = await service.getAllArticles([])
             if(res) {
-                console.log("Is array: ", Array.isArray(res));
                 setArticles(res)
             }
             setLoading(false)
@@ -25,7 +24,7 @@ function AllArticles() {
         
     },[])
     
-    console.log("Articles: ",articles);
+    //console.log("Articles: ",articles);
 
     return (
         <div className='w-full py-8 mb-auto'>

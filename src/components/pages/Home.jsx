@@ -1,5 +1,5 @@
-import { Button , Container ,AddArticle } from "../index"
-import React, { useEffect, useState } from 'react'
+import { AddArticle } from "../index"
+import React from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from "react-router-dom"
 
@@ -33,11 +33,3 @@ function Home() {
 export default Home
 
 
-//const [articles,setArticles] = useState([]) 
-
-/*
-<div className=" text-center ">
-                        <h3 className=" text-2xl font-medium " >Your articles</h3>
-                    </div>
-                    <div className="flex flex-wrap h-1/3" ></div>
-*/
