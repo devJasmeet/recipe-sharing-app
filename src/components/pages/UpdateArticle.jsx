@@ -15,7 +15,7 @@ function UpdateArticle() {
             navigate("/")
         }
     },[slug,navigate])
-    console.log(article);
+    //console.log(article);
   return article ? (
     <div>
         <Container>

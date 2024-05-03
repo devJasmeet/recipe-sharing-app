@@ -28,16 +28,14 @@ function ArticleForm({article}) {
     const [imageSrc,setSrc] = useState("")
     const userData = useSelector(state => state.auth.userData)
     //console.log(userData);
-    console.log("Logged");
 
     const submit = async(data) => {
-        console.log("article submit called");
 //  current article has to be updated
         if(article) {
             console.log("entered update function");
             
             const file = data.featuredImage[0] ? await service.uploadFile(data.image[0]) : null;
-            console.log("file upload result :", file);
+            //console.log("file upload result :", file);
 
             if(file) {
                 await service.delFile(article.featuredImage)
@@ -59,18 +57,16 @@ function ArticleForm({article}) {
 
         } else {    
 // new article creation
-            //console.log(data);
-            console.log("entered create function");
             if(userData) {
                 if(data.featuredImage[0]) {
 
                     const file = await service.uploadFile(data.featuredImage[0])
-                    console.log("file upload result :", file);
+                    //console.log("file upload result :", file);
 
                     if(file) {
                         const fileId = file.$id;
                         data.featuredImage= fileId 
-                        console.log(userData);
+                        //console.log(userData);
 
                             const newArticle = await service.createArticle({
                                 ...data,

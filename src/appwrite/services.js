@@ -17,7 +17,7 @@ export class Services {
     }
 
     async createArticle({title,slug,content,featuredImage,status,userId,author}) {
-        console.log("create article called");
+        //console.log("create article called");
         try {
             return await this.databases.createDocument(
                 config.appwriteDatabaseId,
@@ -64,7 +64,7 @@ export class Services {
     }
 
     async getArticle(slug) {
-        console.log("Get article called. Slug : ", slug);
+        //console.log("Get article called. Slug : ", slug);
         try {
             return await this.databases.getDocument(
                 config.appwriteDatabaseId,
@@ -79,8 +79,7 @@ export class Services {
 
     async getAllArticles(queries = [Query.equal('status', ['Active'])]) {
         try {
-            console.log("get all articles called");
-            //console.log(queries);
+            //console.log("get all articles called");
             const res = await this.databases.listDocuments(
                 config.appwriteDatabaseId,
                 config.appwriteCollectionId,
@@ -127,7 +126,7 @@ export class Services {
                 config.appwriteBucketId,
                 fileId
             )
-            console.log(res.href);
+            //console.log(res.href);
             return res.href
         } catch (error) {
             console.log("Error getting file", error);

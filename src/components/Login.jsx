@@ -29,7 +29,7 @@ function Login() {
             $id:res.$id,
             name:res.name
           }
-          console.log(userData);
+          //console.log(userData);
           dispatch(storeLogin({userData}));  
         }
         navigate("/")

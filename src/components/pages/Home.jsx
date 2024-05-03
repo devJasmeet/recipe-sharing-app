@@ -8,8 +8,7 @@ function Home() {
     const userData = useSelector(state => state.auth.userData)
     const loginStatus = useSelector(state => state.auth.status)
     const navigate = useNavigate();
-    console.log("Auth status: ",loginStatus);
-    console.log("User: ",userData);
+    //console.log("User: ",userData);
 
     return (
         <>

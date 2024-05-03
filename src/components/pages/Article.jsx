@@ -19,16 +19,10 @@ function Article() {
     //console.log(slug);
     const navigate = useNavigate()
     
-    
-    //if(article) service.getFile(article.featuredImage).then( res => setSrc(res));
-
     useEffect(()=>{
-        //console.log("entered useEffect");
         service.getArticle(slug).then((article) => {
             if(article) {
                 setArticle(article)
-                //console.log(article);
-                //console.log(typeof article)
             } else {
                 navigate("/")
             }
@@ -38,9 +32,7 @@ function Article() {
     },[slug,navigate])
 
     const userData = useSelector(state => state.auth.userData)
-    const isAuthor = article?.userId === userData?.$id
-    //console.log( Parser(article.content));
-    
+    const isAuthor = article?.userId === userData?.$id  
 
     const deleteArticle = async () => {
         console.log("Delete article called");

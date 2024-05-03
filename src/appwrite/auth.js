@@ -16,7 +16,7 @@ export class AuthService {
     }
 
     createAccount = async ({ email , password , name }) => {
-        console.log("Create account called");
+        //console.log("Create account called");
         try {
             const userAccount = await this.account.create(ID.unique(), email , password , name);
             if(userAccount) {
@@ -31,7 +31,7 @@ export class AuthService {
     }
 
     login = async ({ email , password  }) => {
-        console.log("Appwrite Login called");
+        //console.log("Appwrite Login called");
         try {
             const userAccount =  await this.account.createEmailPasswordSession(email , password)
             if(userAccount) {
