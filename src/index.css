@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.heading {
+    background-image: url(/headingImage.png);
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    
+}
+  
+@media screen and (max-width: 960px) {
+    
+    .article-form {
+        
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .article-form div {
+        gap: 0.5rem;
+        margin: 0.5rem auto;
+        width: 100%;
+        padding: 0;
+    }
+
+    .article {
+        flex-direction: column;
+    }
+
+    .article div {
+        width: 100%;
+    }
+}
