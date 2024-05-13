@@ -6,6 +6,10 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+#small-navbar {
+    display: none;
+}
+
 .heading {
     background-image: url(/headingImage.png);
     background-size: cover;
@@ -39,4 +43,29 @@ body {
     .article div {
         width: 100%;
     }
+
+    #header-navbar {
+        display: none;
+    }
+
+    #small-navbar {
+        display: block;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 9999;
+        
+    }
+
+
+
+    .header-menu-items {
+        display: none;
+    }
 }
+

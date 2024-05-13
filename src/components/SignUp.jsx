@@ -39,7 +39,7 @@ function SignUp() {
                 <span className=' text-gray-500 font-light '>Already have an account? Go to </span>
                 <Link to="/login">LOGIN</Link>
             </p>
-            { error && <p className='text-center text-red-800 font-light text-sm ' >{error}</p>}
+            { error && <p className='text-center text-red-600  text-sm ' >{error}</p>}
         
             <form onSubmit={handleSubmit(userSignUp)} >
                 <div>
