@@ -59,7 +59,11 @@ const router = createBrowserRouter([
       },
       {
         path : "/all-articles",
-        element : <AllArticles />
+        element : (
+          <AccessLayout authentication={true}>
+            <AllArticles />
+          </AccessLayout>
+        )
       }
   ]}
 ])
